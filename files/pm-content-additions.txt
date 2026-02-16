@@ -1,0 +1,1417 @@
+===== ADD TO EXECUTION LESSONS =====
+
+"Agile/Scrum": {
+      content: `
+# Agile & Scrum for Product Managers
+
+## What is Agile?
+
+A philosophy of software development that values:
+- **Individuals and interactions** over processes and tools
+- **Working software** over comprehensive documentation
+- **Customer collaboration** over contract negotiation
+- **Responding to change** over following a plan
+
+## Scrum Framework
+
+**Scrum** is the most popular Agile methodology.
+
+### The Scrum Team
+
+**Product Owner (That's You!)**
+- Defines the vision
+- Prioritizes backlog
+- Accepts/rejects work
+
+**Scrum Master**
+- Facilitates ceremonies
+- Removes blockers
+- Coaches team on Agile
+
+**Development Team**
+- Engineers, designers, QA
+- Self-organizing
+- Cross-functional
+
+### Scrum Artifacts
+
+**1. Product Backlog**
+- Prioritized list of all work
+- Owned by PM
+- Continuously refined
+
+**2. Sprint Backlog**
+- Work committed for current sprint
+- Team owns execution
+
+**3. Increment**
+- Potentially shippable product at end of sprint
+
+### Scrum Ceremonies
+
+**Sprint Planning** (2-4 hours)
+- What can we deliver this sprint?
+- How will we do it?
+- PM presents prioritized backlog
+- Team commits to sprint goal
+
+**Daily Standup** (15 min)
+- What did I do yesterday?
+- What will I do today?
+- Any blockers?
+- PM attends but doesn't run it
+
+**Sprint Review/Demo** (1-2 hours)
+- Demo what was built
+- Get stakeholder feedback
+- PM decides: ship or iterate?
+
+**Sprint Retrospective** (1 hour)
+- What went well?
+- What could improve?
+- Action items for next sprint
+- Team-only (PM usually not present)
+
+**Backlog Refinement** (Ongoing)
+- Break down stories
+- Add details
+- Estimate effort
+- PM leads this
+
+## PM's Role in Agile
+
+### Before Sprint
+- Prioritize backlog
+- Write user stories
+- Define acceptance criteria
+- Ensure stories are "ready"
+
+### During Sprint
+- Answer questions
+- Unblock team
+- Manage stakeholders
+- Prepare for demo
+
+### After Sprint
+- Review work
+- Gather feedback
+- Update roadmap
+- Plan next sprint
+
+## Writing Good User Stories
+
+**Format**:
+As a [user type]
+I want [feature]
+So that [benefit]
+
+**Example**:
+As a driver
+I want to see passenger ratings before accepting
+So that I can avoid problematic riders
+
+**Acceptance Criteria**:
+- Rating displayed on ride request screen
+- Shows average rating + number of trips
+- Can decline without penalty if rating < 4.5
+
+## Definition of Ready (DoR)
+
+Story is ready for sprint when:
+- [ ] User story is clear
+- [ ] Acceptance criteria defined
+- [ ] Designs attached (if needed)
+- [ ] Dependencies identified
+- [ ] Estimated by team
+- [ ] Prioritized by PM
+
+## Definition of Done (DoD)
+
+Work is done when:
+- [ ] Code written & reviewed
+- [ ] Tests pass
+- [ ] Designs match
+- [ ] Acceptance criteria met
+- [ ] PM has accepted
+- [ ] Deployed to staging/production
+
+## Sprint Velocity
+
+**Velocity** = Amount of work completed per sprint
+
+Track over time:
+- Sprint 1: 21 points
+- Sprint 2: 18 points
+- Sprint 3: 24 points
+- **Average**: ~21 points/sprint
+
+Use for forecasting:
+- Feature X = 42 points
+- At 21 points/sprint
+- **Estimate**: 2 sprints
+
+## Handling Common Challenges
+
+**Challenge**: Engineers want to spend full sprint on tech debt
+**Solution**: Allocate 20% capacity for tech debt/improvements
+
+**Challenge**: Stakeholder wants mid-sprint change
+**Solution**: Add to backlog for next sprint (unless critical bug)
+
+**Challenge**: Team consistently misses commitments
+**Solution**: Reduce sprint scope, improve estimation, address blockers
+
+**Challenge**: Design isn't ready when sprint starts
+**Solution**: Design 1-2 sprints ahead
+
+## Kanban vs Scrum
+
+**Scrum**:
+- Fixed sprint length (2 weeks)
+- Work in batches
+- Regular releases
+
+**Kanban**:
+- Continuous flow
+- Work-in-progress limits
+- Release anytime
+
+**When to use Kanban**:
+- Support/maintenance mode
+- Unpredictable work (bugs, requests)
+- Mature product with continuous deployment
+
+**When to use Scrum**:
+- New product development
+- Need regular planning cadence
+- Large features requiring coordination
+      `,
+      keyTakeaways: [
+        "Agile = iterative development with continuous feedback",
+        "PM owns the 'what' (backlog), team owns the 'how' (execution)",
+        "Sprint planning, standup, review, retro are core ceremonies"
+      ],
+      framework: "Scrum Framework",
+      tools: ["Jira", "Linear", "Asana", "Monday.com"],
+      nextSteps: "Attend 3 full sprint cycles to understand the rhythm"
+    },
+    "Feature Prioritization": {
+      content: `
+# Feature Prioritization
+
+## Why Prioritization Matters
+
+You have 100 ideas. You can only build 10. Prioritization = your superpower.
+
+## RICE Framework
+
+**Most popular PM prioritization framework**
+
+### R = Reach
+How many users affected per time period?
+- New onboarding flow: 1000 users/month
+- Power user feature: 50 users/month
+
+### I = Impact  
+How much does it move the needle?
+- 0.25 = Minimal
+- 0.5 = Low
+- 1 = Medium
+- 2 = High
+- 3 = Massive
+
+### C = Confidence
+How sure are you?
+- 100% = Have data
+- 80% = Strong hypothesis
+- 50% = Educated guess
+- 20% = Wild guess (don't build)
+
+### E = Effort
+Person-months of work
+- 0.5 = Few days
+- 1 = One person-month
+- 2 = Two person-months
+- 5+ = Quarter+ of work
+
+**RICE Score = (R × I × C) / E**
+
+### Example:
+
+**Feature A**: Improved onboarding
+- Reach: 2000 users/month
+- Impact: 2 (high - drives activation)
+- Confidence: 80%
+- Effort: 2 person-months
+- **RICE = (2000 × 2 × 0.8) / 2 = 1600**
+
+**Feature B**: Dark mode
+- Reach: 5000 users/month
+- Impact: 0.5 (nice-to-have)
+- Confidence: 100%
+- Effort: 1 person-month
+- **RICE = (5000 × 0.5 × 1.0) / 1 = 2500**
+
+**Winner**: Dark mode (higher RICE)
+
+## Other Frameworks
+
+### Value vs Effort (2x2 Matrix)
+
+```
+High Value  | Quick Win  | Big Bet
+           |            |
+           |------------|
+           |            |
+Low Value   | Fill-In    | Time Sink
+           
+           Low Effort  High Effort
+```
+
+**Priority**:
+1. Quick wins
+2. Big bets
+3. Fill-ins
+4. Avoid time sinks
+
+### MoSCoW
+
+- **Must have**: Non-negotiable
+- **Should have**: Important but not critical
+- **Could have**: Nice-to-have
+- **Won't have**: Not doing this time
+
+### ICE Score
+
+- **Impact**: How much value?
+- **Confidence**: How sure?
+- **Ease**: How easy to build?
+
+**ICE Score = (I + C + E) / 3**
+
+Simpler than RICE but less nuanced.
+
+### Kano Model
+
+Features fall into categories:
+
+**1. Basic Needs** (table stakes)
+- If missing: users are dissatisfied
+- If present: users are neutral
+- Example: App doesn't crash
+
+**2. Performance Needs** (more is better)
+- More = more satisfaction
+- Example: Faster loading
+
+**3. Delighters** (unexpected joy)
+- Not expected, but users love it
+- Example: Spotify Wrapped
+
+**Strategy**:
+- Fix all basic needs first
+- Improve performance needs strategically
+- Add delighters when you can
+
+## Prioritization Principles
+
+### 1. Align with Strategy
+Does this move us toward our vision?
+
+### 2. Maximize Value/Effort Ratio
+Quick wins build momentum
+
+### 3. Consider Dependencies
+Feature B requires Feature A? Do A first.
+
+### 4. Balance Short-term vs Long-term
+Don't ignore tech debt while chasing features
+
+### 5. Listen to Data, Not HiPPO
+(Highest Paid Person's Opinion)
+
+### 6. Say No to Good Ideas
+"Good" ideas distract from "great" ones
+
+## The Prioritization Process
+
+**Step 1**: List all ideas
+- Backlog of 50+ items
+
+**Step 2**: Quickly eliminate obvious nos
+- Out of strategy
+- Too large
+- Not solving real problem
+
+**Step 3**: Score remaining items (RICE)
+- Be honest about scores
+- Get input from team
+
+**Step 4**: Rank by score
+- Top 10 candidates
+
+**Step 5**: Check for balance
+- All features for power users? Adjust.
+- All quick wins, no strategic bets? Adjust.
+
+**Step 6**: Get team buy-in
+- Share rationale
+- Explain tradeoffs
+
+**Step 7**: Commit to top 3-5
+- For next quarter
+- Revisit quarterly
+
+## When Stakeholders Push Back
+
+**Scenario**: "We NEED feature X for this big customer deal"
+
+**Response**: 
+1. Validate: Is this feature actually blocking the deal?
+2. Generalize: Would this feature help other customers too?
+3. Assess effort: Can we do a simple version?
+4. Trade-off: What would we NOT do if we do this?
+5. Decide using framework (not just loudest voice)
+
+**Phrases**:
+- "Help me understand the impact. How many customers need this?"
+- "If we do this, we can't do Y. Which is more important?"
+- "Can we test this assumption with the customer first?"
+
+## Real Example: Spotify's Prioritization
+
+**2016 Problem**: What to prioritize?
+- Family plan
+- Student discount
+- Podcasts
+- Lyrics
+- Video
+
+**How they decided**:
+
+**Family Plan**:
+- Reach: 50M potential subscribers
+- Impact: 3 (major revenue driver)
+- Confidence: 80% (tested in select markets)
+- Effort: 3 months
+- **RICE: High**
+- ✅ Built in Q2 2016
+
+**Video**:
+- Reach: All users
+- Impact: 1.5 (engagement increase unclear)
+- Confidence: 30% (unproven)
+- Effort: 6 months
+- **RICE: Low**
+- ❌ Deprioritized (later shut down)
+
+**Result**: Family plan became huge revenue driver. Video was canceled.
+
+## Exercise
+
+Take your product backlog:
+1. List your top 10 feature ideas
+2. Score each with RICE
+3. Rank by score
+4. What surprised you?
+5. What would you cut?
+      `,
+      keyTakeaways: [
+        "RICE = (Reach × Impact × Confidence) / Effort",
+        "Good ideas are the enemy of great ideas - say no often",
+        "Use frameworks to make objective decisions, not politics"
+      ],
+      framework: "RICE, Value vs Effort, MoSCoW, ICE, Kano Model",
+      tools: ["ProductBoard", "Aha!", "Spreadsheets"],
+      nextSteps: "Score your backlog using RICE framework"
+    },
+
+===== ADD TO STAKEHOLDERS LESSONS =====
+
+"Influence Without Authority": {
+      content: `
+# Influence Without Authority
+
+## The PM's Dilemma
+
+You're responsible for the product's success, but you don't manage anyone:
+- You can't tell Engineering what to build
+- You can't tell Design what to design
+- You can't tell Sales what to sell
+
+**You must influence, not command.**
+
+## The 5 Sources of Influence
+
+### 1. Expertise
+Be the expert on:
+- User needs
+- Market dynamics
+- Product vision
+- Data/metrics
+
+**How to build it**: Do the research no one else has time for
+
+### 2. Relationships
+Build trust before you need it
+- Lunch with engineers
+- Help others when they ask
+- Remember personal details
+- Be reliable
+
+### 3. Data
+Numbers don't lie
+- User metrics
+- Customer feedback
+- A/B test results
+- Market research
+
+### 4. Story
+Paint a picture people want to be part of
+- Where are we going?
+- Why does it matter?
+- What role do they play?
+
+### 5. Facilitation
+Make others look good
+- Give credit generously
+- Highlight their work
+- Ask for their input
+- Make them the hero
+
+## Influencing Different Stakeholders
+
+### Engineering
+**What they care about**:
+- Technical excellence
+- No stupid requirements
+- Interesting problems
+- Work-life balance
+
+**How to influence**:
+- Write clear specs
+- Understand technical constraints
+- Protect them from scope creep
+- Celebrate technical wins
+
+**Don't**:
+- Commit to dates without them
+- Change requirements mid-sprint
+- Throw specs over the wall
+- Blame them when things go wrong
+
+### Design
+**What they care about**:
+- User experience
+- Design quality
+- Creative freedom
+- Impact
+
+**How to influence**:
+- Involve early (not after specs are done)
+- Share user research
+- Give context, not solutions
+- Trust their expertise
+
+**Don't**:
+- Dictate the design
+- Skip research
+- Rush the process
+- Overrule without data
+
+### Sales
+**What they care about**:
+- Closing deals
+- Commission
+- Customer promises
+- Competitive wins
+
+**How to influence**:
+- Enable them (demos, collateral)
+- Understand their challenges
+- Deliver on commitments
+- Give them wins
+
+**Don't**:
+- Promise features with no timeline
+- Blame them for revenue misses
+- Ignore their customer feedback
+- Launch without warning
+
+### Marketing
+**What they care about**:
+- Launches
+- Messaging
+- Lead generation
+- Brand
+
+**How to influence**:
+- Loop them in early
+- Give them compelling story
+- Support their campaigns
+- Share user insights
+
+**Don't**:
+- Surprise launch them
+- Ignore positioning
+- Build features no one cares about
+- Skip the go-to-market plan
+
+### Executives
+**What they care about**:
+- Revenue/growth
+- Strategy execution
+- Competitive position
+- Risk management
+
+**How to influence**:
+- Show business impact
+- Be concise (execs are busy)
+- Know your numbers
+- Recommend, don't just present problems
+
+**Don't**:
+- Bring problems without solutions
+- Ramble
+- Ignore the business model
+- Surprise them with bad news
+
+## The Influence Toolkit
+
+### 1. Start with Why
+"Here's what we're seeing from users..."
+"The data shows..."
+"Our strategy is to..."
+Then: "So I'm thinking we should..."
+
+### 2. Make it Their Idea
+Ask questions that lead them to your conclusion:
+- "What if we tried..."
+- "What would happen if..."
+- "How might we..."
+
+### 3. Build Coalition
+Get key people on board before the big meeting
+- 1:1 conversations
+- "Can I run something by you?"
+- Address concerns privately
+
+### 4. Use Pilot Programs
+Instead of: "We should completely redesign the app"
+Try: "What if we test this with 5% of users first?"
+
+### 5. Frame as Experiment
+"Let's run a 2-week experiment and see what we learn"
+Lower commitment = easier yes
+
+### 6. Speak Their Language
+- To engineers: "This reduces technical debt"
+- To sales: "This closes 3 pending deals"
+- To executives: "This moves our North Star metric"
+
+## Dealing with Conflict
+
+### Scenario 1: Engineering says "This will take 6 months"
+You think it should take 1 month.
+
+❌ Bad: "That's ridiculous, it's simple!"
+
+✅ Good: 
+"Help me understand the complexity. What's driving the timeline?"
+Then: "What if we cut scope to X? Could we ship in 2 months?"
+
+### Scenario 2: Sales wants a custom feature for one customer
+But it's off-strategy.
+
+❌ Bad: "No, we're not building that."
+
+✅ Good:
+"I understand this deal is important. Let's look at the data:
+- How many other customers need this?
+- What's the revenue impact?
+- What would we NOT build if we do this?
+Based on that, here's my recommendation..."
+
+### Scenario 3: Design disagrees with your direction
+
+❌ Bad: "Just design what I asked for."
+
+✅ Good:
+"I hear your concerns. Can you show me what you're thinking?
+Maybe there's a better way I'm not seeing.
+The problem we're trying to solve is X - how would you approach it?"
+
+## Building Long-term Influence
+
+### 1. Be Right (Often)
+Your ideas should generally work out
+- Do your homework
+- Validate before building
+- Follow up on results
+
+### 2. Be Honest
+If you made a mistake, admit it
+"I was wrong about X. Here's what I learned."
+
+### 3. Be Helpful
+Help others succeed
+- Unblock people
+- Share insights
+- Make intros
+
+### 4. Be Reliable
+Do what you say you'll do
+- Meet deadlines
+- Follow through
+- Respond promptly
+
+### 5. Be Humble
+You don't know everything
+- Ask for input
+- Listen to feedback
+- Give credit
+
+## Red Flags You're Doing It Wrong
+
+🚩 People avoid your meetings
+🚩 No one responds to your Slack messages
+🚩 Your ideas get shot down regularly
+🚩 You hear "that's not in my scope"
+🚩 People route around you
+
+**Fix**:
+- Ask for feedback: "How can I be more effective?"
+- Rebuild relationships
+- Deliver some wins
+- Change your approach
+
+## Real Example: Airbnb's Photography Initiative
+
+**Context**: 
+Listings had terrible photos. Bookings were suffering.
+
+**Problem**: 
+How do you get hosts to improve photos without mandating it?
+
+**Bad Approach**:
+"All hosts must use professional photographers"
+→ Hosts would rebel, too expensive, not scalable
+
+**Good Approach** (what they actually did):
+1. Ran experiment: Offered free photography in SF
+2. Showed data: 2-3x more bookings with pro photos
+3. Made it optional but promoted it
+4. Let hosts see their neighbors' success
+5. Eventually 13,000 freelance photographers in network
+
+**Result**: Hosts wanted it because they saw the value, not because they were forced.
+
+**Lesson**: Influence through:
+- Data (2-3x more bookings)
+- Social proof (neighbors succeeding)
+- Making it easy (free, optional)
+- Letting people choose
+      `,
+      keyTakeaways: [
+        "Influence through expertise, relationships, data, story, and facilitation",
+        "Understand what each stakeholder cares about, speak their language",
+        "Build coalition before the big meeting - no surprises"
+      ],
+      framework: "Influencing Stakeholders Matrix",
+      tools: ["1:1s", "Pre-meetings", "Data dashboards"],
+      nextSteps: "Map your key stakeholders and plan how to influence each one"
+    },
+
+===== ADD TO METRICS LESSONS =====
+
+"KPIs & OKRs": {
+      content: `
+# KPIs & OKRs for Product Managers
+
+## KPIs vs OKRs
+
+### KPI (Key Performance Indicator)
+**What**: Health metrics you track continuously
+**Purpose**: Monitor business health
+**Example**: Monthly Active Users, Churn Rate, NPS
+
+### OKR (Objectives & Key Results)
+**What**: Ambitious goals for a specific time period
+**Purpose**: Drive change and focus
+**Example**: 
+- Objective: Become the #1 collaboration tool for remote teams
+- Key Result 1: Increase team adoption from 10% → 30%
+- Key Result 2: Achieve 4.5+ G2 rating
+- Key Result 3: $10M ARR from enterprise
+
+## North Star Metric
+
+The ONE metric that best captures core value you deliver to customers.
+
+**Examples**:
+- Airbnb: Nights booked
+- Facebook: Daily Active Users (DAU)
+- Slack: Messages sent
+- Spotify: Time spent listening
+- Uber: Rides per week
+
+**Good North Star characteristics**:
+✅ Measures value to customer
+✅ Leads to revenue (directly or indirectly)
+✅ Actionable (team can move it)
+✅ Understandable (everyone gets it)
+
+## AARRR Pirate Metrics
+
+**A**cquisition: Users discover you
+**A**ctivation: Users have good first experience
+**R**etention: Users come back
+**R**evenue: Users pay
+**R**eferral: Users tell others
+
+Example: SaaS Product
+
+**Acquisition**: 10,000 signups/month
+**Activation**: 40% complete onboarding
+**Retention**: 60% return Week 2
+**Revenue**: 5% convert to paid
+**Referral**: 15% invite teammates
+
+## Setting Good OKRs
+
+### O = Objective (the "What")
+**Qualitative, inspirational, time-bound**
+
+❌ Bad: "Improve metrics"
+✅ Good: "Become the go-to platform for freelance designers"
+
+❌ Bad: "Make more money"
+✅ Good: "Achieve sustainable unit economics"
+
+### KR = Key Results (the "How")
+**Quantitative, measurable, achievable but ambitious**
+
+For Objective: "Become the go-to platform for freelance designers"
+
+KR1: Increase Monthly Active Designers from 50K → 150K
+KR2: Achieve 50% of designers earning $1K+/month (up from 20%)
+KR3: Reach 4.8/5 app store rating
+
+## OKR Cadence
+
+**Annual OKRs**: Company-wide strategy
+**Quarterly OKRs**: Team/product focus
+**Monthly Check-ins**: Progress review
+
+## Scoring OKRs
+
+**0.0 - 0.3**: Missed - major issues
+**0.4 - 0.6**: Made progress but fell short
+**0.7 - 1.0**: Hit or exceeded
+
+**Note**: Consistently hitting 1.0 = goals aren't ambitious enough!
+
+## Common Metrics by Product Stage
+
+### Early Stage (Finding PMF)
+- Retention cohorts (Week 1, Week 4)
+- Core action completion rate
+- Qualitative feedback (NPS, interviews)
+- "Aha moment" activation rate
+
+### Growth Stage
+- User acquisition cost (CAC)
+- Lifetime value (LTV)
+- Viral coefficient (K-factor)
+- Activation rate
+- Retention rate
+
+### Maturity Stage
+- Revenue per user
+- Churn rate
+- Net revenue retention
+- Customer satisfaction (NPS/CSAT)
+- Market share
+
+## Choosing the Right Metrics
+
+**Vanity Metrics** (look good but don't matter):
+❌ Total registered users (if most are inactive)
+❌ Page views (if no engagement)
+❌ App downloads (if not used)
+
+**Actionable Metrics** (you can actually improve):
+✅ Weekly Active Users / Monthly Active Users (WAU/MAU)
+✅ % users completing core action
+✅ Time to value
+✅ Retention curves
+
+## Red Flags in Metrics
+
+🚩 **Metric Gaming**
+Example: PM bonused on signups → team buys fake accounts
+
+🚩 **Metric Tunnel Vision**
+Focusing on one metric ignores others
+Example: Optimize for growth → ignore retention → users churn
+
+🚩 **Lagging Indicators Only**
+Only tracking outputs (revenue) not inputs (user engagement)
+
+🚩 **Too Many Metrics**
+Tracking 50 things = tracking nothing
+Pick 5-7 key metrics
+
+## Real Example: Superhuman's OKR
+
+**Context**: Superhuman in 2019
+
+**Objective**: Achieve strong product-market fit
+
+**Key Results**:
+- KR1: 40%+ of users say they'd be "very disappointed" without Superhuman
+- KR2: Reduce median time to inbox zero from 60 min → 15 min
+- KR3: 4.5+ NPS among active users
+
+**How they tracked**:
+- Quarterly user surveys
+- In-app analytics
+- Customer interviews
+
+**Result**: Hit 58% "very disappointed" (exceeded 40% goal)
+
+**What happened next**:
+This validated PMF. They then focused OKRs on growth and retention.
+
+## Exercise
+
+For your product:
+1. What's your North Star Metric?
+2. Map your AARRR funnel with real numbers
+3. Write one Quarterly OKR with 3 Key Results
+4. How will you measure success?
+      `,
+      keyTakeaways: [
+        "North Star Metric = ONE metric that captures core value",
+        "OKRs should be ambitious (hitting 1.0 every time = not ambitious enough)",
+        "Focus on actionable metrics, not vanity metrics"
+      ],
+      framework: "North Star Metric, AARRR, OKR Framework",
+      tools: ["Amplitude", "Mixpanel", "Google Analytics", "Looker"],
+      nextSteps: "Define your North Star Metric and AARRR funnel"
+    },
+
+===== ADD TO TECHNICAL LESSONS =====
+
+"API Basics": {
+      content: `
+# API Basics for Product Managers
+
+## What is an API?
+
+**API = Application Programming Interface**
+
+Think of it as a waiter at a restaurant:
+- You (app) tell waiter (API) what you want
+- Waiter takes order to kitchen (server)
+- Kitchen prepares food (data)
+- Waiter brings food back to you
+
+## Why PMs Need to Understand APIs
+
+1. **Build better products**: Understand technical constraints
+2. **Talk to engineers**: Speak their language
+3. **Evaluate integrations**: What's possible?
+4. **Scope features**: Know what's hard vs easy
+
+## REST APIs (Most Common)
+
+### HTTP Methods:
+- **GET**: Retrieve data
+  - `GET /users/123` → Get user 123's info
+- **POST**: Create new data
+  - `POST /users` → Create new user
+- **PUT**: Update data
+  - `PUT /users/123` → Update user 123
+- **DELETE**: Delete data
+  - `DELETE /users/123` → Delete user 123
+
+### Example: Spotify API
+
+Get a playlist:
+```
+GET https://api.spotify.com/v1/playlists/37i9dQZF1DXcBWIGoYBM5M
+```
+
+Response:
+```json
+{
+  "name": "Today's Top Hits",
+  "tracks": [
+    {
+      "title": "Song Name",
+      "artist": "Artist Name",
+      "duration": 180000
+    }
+  ]
+}
+```
+
+## Common API Concepts
+
+### 1. Endpoints
+URLs where you can access different resources
+- `/users` → User list
+- `/users/123` → Specific user
+- `/users/123/posts` → User's posts
+
+### 2. Authentication
+How API knows who you are
+- **API Keys**: Simple token
+- **OAuth**: Secure login (like "Sign in with Google")
+
+### 3. Rate Limiting
+How many requests allowed per time period
+- "100 requests per hour"
+- Prevents abuse
+
+### 4. Webhooks
+API calls YOU when something happens
+- Example: Stripe webhook when payment succeeds
+- Instead of constantly checking, they notify you
+
+### 5. Status Codes
+- **200**: Success
+- **400**: Bad request (your fault)
+- **401**: Unauthorized (need login)
+- **404**: Not found
+- **500**: Server error (their fault)
+
+## SDK vs API
+
+**API**: Raw interface (more flexible, more work)
+**SDK**: Pre-built code library (easier, less flexible)
+
+Example:
+- Stripe API: Make HTTP requests manually
+- Stripe SDK: `stripe.charges.create()` - much easier
+
+## Real-World PM Scenarios
+
+### Scenario 1: Integrating with Another Service
+
+**Request**: "Can we integrate with Salesforce?"
+
+**PM should ask**:
+- Do they have a public API?
+- What data can we access?
+- What are the rate limits?
+- Do we need OAuth?
+- Is there an SDK?
+
+### Scenario 2: Building an API
+
+**Request**: "We want to let other apps integrate with us"
+
+**PM should decide**:
+- What data to expose?
+- How to authenticate?
+- What rate limits?
+- How to version it? (v1, v2)
+- Documentation strategy
+
+### Scenario 3: Third-Party API Goes Down
+
+**Problem**: Your product depends on Google Maps API, and it's down
+
+**PM should**:
+- Have backup plan (fallback provider?)
+- Communicate to users
+- Understand SLA (Service Level Agreement)
+- Consider rate limiting our own usage
+
+## GraphQL (Alternative to REST)
+
+**Advantage**: Request exactly the data you need
+
+REST (multiple requests):
+```
+GET /users/123
+GET /users/123/posts
+GET /users/123/followers
+```
+
+GraphQL (one request):
+```graphql
+{
+  user(id: 123) {
+    name
+    posts { title }
+    followers { name }
+  }
+}
+```
+
+**When to use**:
+- Complex data requirements
+- Mobile apps (minimize requests)
+- When you need flexibility
+
+## What PMs Don't Need to Know
+
+❌ How to write API code
+❌ Exact implementation details
+❌ Database queries
+
+✅ What's possible
+✅ Rough effort level
+✅ Tradeoffs between approaches
+
+## PM-Friendly API Questions
+
+When evaluating an integration:
+
+1. **"Does this API give us what we need?"**
+   - Check API documentation
+   - Look at example responses
+
+2. **"How reliable is it?"**
+   - Uptime stats?
+   - SLA?
+
+3. **"What's the cost?"**
+   - Free tier?
+   - Per-request pricing?
+
+4. **"How hard to integrate?"**
+   - SDK available?
+   - Good documentation?
+   - Active support?
+
+5. **"What happens if it breaks?"**
+   - Can we cache data?
+   - Fallback option?
+
+## Exercise
+
+1. Find the API documentation for a product you use (Stripe, Twilio, etc.)
+2. Look at one endpoint
+3. Understand: What does it do? What data does it return?
+4. Could you explain it to your team?
+      `,
+      keyTakeaways: [
+        "API = way for software to talk to other software",
+        "REST APIs use GET, POST, PUT, DELETE methods",
+        "PMs need to understand what's possible, not how to code it"
+      ],
+      framework: "REST API Basics",
+      tools: ["Postman", "API Documentation"],
+      nextSteps: "Explore API documentation for a product you want to integrate with"
+    },
+
+===== NEW SECTIONS TO ADD =====
+
+// PM Books Library
+const PM_BOOKS = {
+  fundamentals: [
+    {
+      title: "Inspired: How to Create Tech Products Customers Love",
+      author: "Marty Cagan",
+      why: "The PM bible. Covers discovery, delivery, and building strong product teams.",
+      level: "Beginner",
+      rating: 5,
+      link: "https://www.amazon.com/INSPIRED-Create-Tech-Products-Customers/dp/1119387507"
+    },
+    {
+      title: "The Lean Product Playbook",
+      author: "Dan Olsen",
+      why: "Practical framework for achieving product-market fit.",
+      level: "Beginner",
+      rating: 5,
+      link: "https://www.amazon.com/Lean-Product-Playbook-Innovate-Products/dp/1118960874"
+    },
+    {
+      title: "Cracking the PM Interview",
+      author: "Gayle McDowell",
+      why: "If you're breaking into PM, this is your guide. Covers product design, strategy, and metrics questions.",
+      level: "Beginner",
+      rating: 4,
+      link: "https://www.amazon.com/Cracking-PM-Interview-Product-Technology/dp/0984782818"
+    }
+  ],
+  userResearch: [
+    {
+      title: "The Mom Test",
+      author: "Rob Fitzpatrick",
+      why: "How to talk to customers and learn if your idea is good when everyone is lying to you. Best book on customer interviews.",
+      level: "Beginner",
+      rating: 5,
+      link: "https://www.momtestbook.com/"
+    },
+    {
+      title: "Continuous Discovery Habits",
+      author: "Teresa Torres",
+      why: "Weekly touchpoints with customers to continuously discover opportunities.",
+      level: "Intermediate",
+      rating: 5,
+      link: "https://www.amazon.com/Continuous-Discovery-Habits-Discover-Products/dp/1736633309"
+    }
+  ],
+  strategy: [
+    {
+      title: "Good Strategy Bad Strategy",
+      author: "Richard Rumelt",
+      why: "Learn what real strategy is (not just goals). Kernel of strategy: diagnosis, guiding policy, coherent actions.",
+      level: "Intermediate",
+      rating: 5,
+      link: "https://www.amazon.com/Good-Strategy-Bad-Difference-Matters/dp/0307886239"
+    },
+    {
+      title: "Crossing the Chasm",
+      author: "Geoffrey Moore",
+      why: "How to move from early adopters to mainstream market.",
+      level: "Intermediate",
+      rating: 4,
+      link: "https://www.amazon.com/Crossing-Chasm-3rd-Disruptive-Mainstream/dp/0062292986"
+    },
+    {
+      title: "7 Powers: The Foundations of Business Strategy",
+      author: "Hamilton Helmer",
+      why: "What creates lasting competitive advantage? Scale economies, network effects, counter-positioning, etc.",
+      level: "Advanced",
+      rating: 5,
+      link: "https://www.amazon.com/7-Powers-Foundations-Business-Strategy/dp/0998116319"
+    }
+  ],
+  growth: [
+    {
+      title: "Hacking Growth",
+      author: "Sean Ellis & Morgan Brown",
+      why: "Growth tactics from Dropbox, Airbnb, Facebook. North Star Metrics, pirate metrics, growth loops.",
+      level: "Intermediate",
+      rating: 4,
+      link: "https://www.amazon.com/Hacking-Growth-Fastest-Growing-Companies-Breakout/dp/045149721X"
+    },
+    {
+      title: "Hooked: How to Build Habit-Forming Products",
+      author: "Nir Eyal",
+      why: "Trigger → Action → Variable Reward → Investment. The Hook Model explained.",
+      level: "Intermediate",
+      rating: 4,
+      link: "https://www.amazon.com/Hooked-How-Build-Habit-Forming-Products/dp/1591847788"
+    }
+  ],
+  leadership: [
+    {
+      title: "Radical Candor",
+      author: "Kim Scott",
+      why: "How to be a great boss: care personally + challenge directly. Critical for senior PMs.",
+      level: "Advanced",
+      rating: 5,
+      link: "https://www.amazon.com/Radical-Candor-Revised-Kick-Ass-Humanity/dp/1250235375"
+    },
+    {
+      title: "The Culture Code",
+      author: "Daniel Coyle",
+      why: "What makes great teams work. Build safety, share vulnerability, establish purpose.",
+      level: "Intermediate",
+      rating: 4,
+      link: "https://www.amazon.com/Culture-Code-Secrets-Highly-Successful/dp/0804176981"
+    }
+  ],
+  classics: [
+    {
+      title: "The Innovator's Dilemma",
+      author: "Clayton Christensen",
+      why: "Why great companies fail. Disruptive innovation theory.",
+      level: "Advanced",
+      rating: 5,
+      link: "https://www.amazon.com/Innovators-Dilemma-Technologies-Management-Innovation/dp/1633691780"
+    },
+    {
+      title: "Zero to One",
+      author: "Peter Thiel",
+      why: "Building companies that create new things. 10x vs 10% better. Contrarian thinking.",
+      level: "Intermediate",
+      rating: 4,
+      link: "https://www.amazon.com/Zero-One-Notes-Startups-Future/dp/0804139296"
+    }
+  ]
+};
+
+// PM Checklist - Path to Becoming a PM
+const PM_CHECKLIST = {
+  phase1: {
+    title: "Phase 1: Foundations (Months 1-3)",
+    description: "Build baseline product knowledge",
+    items: [
+      { task: "Read Inspired by Marty Cagan", completed: false },
+      { task: "Read The Mom Test", completed: false },
+      { task: "Complete this learning app's Fundamentals module", completed: false },
+      { task: "Do 10 product teardowns (analyze products you use)", completed: false },
+      { task: "Learn basic SQL (Mode Analytics tutorial)", completed: false },
+      { task: "Follow 10 PM influencers on Twitter/LinkedIn", completed: false },
+      { task: "Join PM communities (Product School, Mind the Product)", completed: false }
+    ]
+  },
+  phase2: {
+    title: "Phase 2: Hands-On Practice (Months 4-6)",
+    description: "Apply knowledge through projects",
+    items: [
+      { task: "Complete 5 user interviews using The Mom Test", completed: false },
+      { task: "Build a side project from idea → launch", completed: false },
+      { task: "Write 3 PRDs for imaginary features", completed: false },
+      { task: "Create a product roadmap for a real product", completed: false },
+      { task: "Practice 20 product design interview questions", completed: false },
+      { task: "Learn a no-code tool (Webflow, Bubble, or Glide)", completed: false },
+      { task: "Attend 3 PM meetups or webinars", completed: false }
+    ]
+  },
+  phase3: {
+    title: "Phase 3: Portfolio Building (Months 7-9)",
+    description: "Create work samples to show employers",
+    items: [
+      { task: "Complete this app's 5 portfolio projects", completed: false },
+      { task: "Write 5 product case studies (Medium/personal blog)", completed: false },
+      { task: "Create a product strategy deck for a real company", completed: false },
+      { task: "Contribute to open source project", completed: false },
+      { task: "Do 10+ product critiques and post online", completed: false },
+      { task: "Build a personal website showcasing your work", completed: false }
+    ]
+  },
+  phase4: {
+    title: "Phase 4: Job Search (Months 10-12)",
+    description: "Land your first PM role",
+    items: [
+      { task: "Apply to 50+ PM jobs", completed: false },
+      { task: "Network: 20 coffee chats with PMs", completed: false },
+      { task: "Practice product sense questions (50+)", completed: false },
+      { task: "Practice estimation questions (20+)", completed: false },
+      { task: "Practice strategy questions (20+)", completed: false },
+      { task: "Mock interview with 3 PMs", completed: false },
+      { task: "Optimize LinkedIn profile + resume", completed: false },
+      { task: "Apply to APM programs (Google, Meta, Uber, Stripe)", completed: false }
+    ]
+  }
+};
+
+// People and Resources to Follow
+const PM_PEOPLE_RESOURCES = {
+  influencers: [
+    {
+      name: "Lenny Rachitsky",
+      role: "Ex-Airbnb PM, Newsletter Writer",
+      why: "Best PM newsletter. Deep dives on growth, product-market fit, hiring.",
+      link: "https://www.lennysnewsletter.com/",
+      platform: "Newsletter"
+    },
+    {
+      name: "Shreyas Doshi",
+      role: "Ex-Google/Stripe/Twitter PM",
+      why: "PM frameworks, prioritization, career advice. Brilliant Twitter threads.",
+      link: "https://twitter.com/shreyas",
+      platform: "Twitter"
+    },
+    {
+      name: "Teresa Torres",
+      role: "Product Discovery Coach",
+      why: "Continuous discovery habits. User research best practices.",
+      link: "https://www.producttalk.org/",
+      platform: "Blog"
+    },
+    {
+      name: "Marty Cagan",
+      role: "Silicon Valley Product Group",
+      why: "Author of Inspired. Product leadership wisdom.",
+      link: "https://www.svpg.com/articles/",
+      platform: "Blog"
+    },
+    {
+      name: "Gibson Biddle",
+      role: "Ex-Netflix VP Product",
+      why: "Product strategy, consumer products. Netflix case studies.",
+      link: "https://gibsonbiddle.medium.com/",
+      platform: "Medium"
+    },
+    {
+      name: "Julie Zhuo",
+      role: "Ex-Facebook Design VP",
+      why: "Product design, leadership, building teams.",
+      link: "https://medium.com/@joulee",
+      platform: "Medium"
+    }
+  ],
+  newsletters: [
+    {
+      name: "Lenny's Newsletter",
+      focus: "PM frameworks, growth, hiring",
+      frequency: "Weekly",
+      link: "https://www.lennysnewsletter.com/"
+    },
+    {
+      name: "Reforge",
+      focus: "Growth, retention, product-led growth",
+      frequency: "Weekly",
+      link: "https://www.reforge.com/"
+    },
+    {
+      name: "Product Coalition",
+      focus: "PM community content",
+      frequency: "Daily",
+      link: "https://productcoalition.com/"
+    },
+    {
+      name: "Mind the Product",
+      focus: "Product events and community",
+      frequency: "Weekly",
+      link: "https://www.mindtheproduct.com/"
+    }
+  ],
+  communities: [
+    {
+      name: "Product School",
+      description: "PM courses and certification",
+      link: "https://productschool.com/"
+    },
+    {
+      name: "Reforge",
+      description: "Advanced growth & product courses",
+      link: "https://www.reforge.com/"
+    },
+    {
+      name: "Mind the Product",
+      description: "PM events worldwide",
+      link: "https://www.mindtheproduct.com/"
+    },
+    {
+      name: "Product Management Reddit",
+      description: "r/ProductManagement community",
+      link: "https://www.reddit.com/r/ProductManagement/"
+    },
+    {
+      name: "Women in Product",
+      description: "Community for women PMs",
+      link: "https://www.womenpm.org/"
+    }
+  ],
+  podcasts: [
+    {
+      name: "Lenny's Podcast",
+      host: "Lenny Rachitsky",
+      why: "Interviews with top PMs and founders",
+      link: "https://www.lennyspodcast.com/"
+    },
+    {
+      name: "Product Thinking",
+      host: "Melissa Perri",
+      why: "Product strategy and leadership",
+      link: "https://produxlabs.com/product-thinking"
+    },
+    {
+      name: "This is Product Management",
+      host: "Alpha UX",
+      why: "PM interviews and insights",
+      link: "https://www.thisisproductmanagement.com/"
+    }
+  ]
+};
